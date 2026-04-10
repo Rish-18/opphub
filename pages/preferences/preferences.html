@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Interests | OppHub</title>
+    <meta name="description" content="Tell us what opportunities you're looking for so we can personalize your OppHub experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/preferences.css">
+</head>
+
+<body class="auth-page">
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">OppHub</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Preferences Section -->
+    <section class="pref-section">
+        <!-- Ambient background blobs -->
+        <div class="pref-blob pref-blob-1"></div>
+        <div class="pref-blob pref-blob-2"></div>
+
+        <div class="pref-container fade-in-up">
+            <!-- Step indicator -->
+            <div class="pref-step-badge">
+                <span class="step-dot"></span>
+                Step 1 of 1
+            </div>
+
+            <div class="pref-header">
+                <h1>What are you looking for?</h1>
+                <p>Select one or more interests so we can tailor your dashboard with the most relevant opportunities.</p>
+            </div>
+
+            <!-- Preference Cards Grid -->
+            <div class="pref-grid" id="pref-grid">
+                <div class="pref-card" data-value="scholarship" id="card-scholarship">
+                    <div class="pref-card-glow"></div>
+                    <div class="pref-card-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <div class="pref-card-icon">🎓</div>
+                    <h3>Scholarships</h3>
+                    <p>Financial aid & merit-based awards for your education journey.</p>
+                </div>
+
+                <div class="pref-card" data-value="internship" id="card-internship">
+                    <div class="pref-card-glow"></div>
+                    <div class="pref-card-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <div class="pref-card-icon">💼</div>
+                    <h3>Internships</h3>
+                    <p>Hands-on work experience at top companies worldwide.</p>
+                </div>
+
+                <div class="pref-card" data-value="fellowship" id="card-fellowship">
+                    <div class="pref-card-glow"></div>
+                    <div class="pref-card-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <div class="pref-card-icon">🌍</div>
+                    <h3>Fellowships</h3>
+                    <p>Prestigious programs for research, leadership & global impact.</p>
+                </div>
+
+                <div class="pref-card" data-value="competition" id="card-competition">
+                    <div class="pref-card-glow"></div>
+                    <div class="pref-card-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <div class="pref-card-icon">🏆</div>
+                    <h3>Competitions</h3>
+                    <p>Hackathons, challenges & contests to showcase your skills.</p>
+                </div>
+
+                <div class="pref-card" data-value="grant" id="card-grant">
+                    <div class="pref-card-glow"></div>
+                    <div class="pref-card-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <div class="pref-card-icon">📚</div>
+                    <h3>Grants</h3>
+                    <p>Funding for projects, startups & academic research.</p>
+                </div>
+
+                <div class="pref-card" data-value="workshop" id="card-workshop">
+                    <div class="pref-card-glow"></div>
+                    <div class="pref-card-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <div class="pref-card-icon">🛠️</div>
+                    <h3>Workshops / Training</h3>
+                    <p>Skill-building workshops, bootcamps & certification programs to boost professional knowledge.</p>
+                </div>
+            </div>
+
+            <!-- Selection counter + Continue -->
+            <div class="pref-footer">
+                <div class="pref-selection-count" id="selection-count">
+                    <span class="count-number">0</span> selected
+                </div>
+                <button class="btn btn-primary btn-large glow-effect pref-continue-btn" id="continue-btn" disabled>
+                    <span class="btn-text">Continue</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom" style="border-top: none;">
+            <p>&copy; 2026 OppHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/preferences.js"></script>
+</body>
+
+</html>

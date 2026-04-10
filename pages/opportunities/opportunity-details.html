@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunity Details | OppHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+
+<body class="dashboard-page">
+    <nav class="navbar dashboard-navbar">
+        <div class="nav-container" style="max-width: 1400px">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">OppHub</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" class="btn btn-secondary btn-sm" id="logout-btn">Log Out</a>
+            </div>
+        </div>
+    </nav>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <ul class="sidebar-menu">
+                <li class="menu-item">
+                    <a href="../dashboard/dashboard.html">
+                        <span class="menu-icon">📊</span> Dashboard
+                    </a>
+                </li>
+                <li class="menu-item active">
+                    <a href="opportunities.html">
+                        <span class="menu-icon">🔍</span> Opportunities
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../applications/applications.html">
+                        <span class="menu-icon">🔖</span> My Applications
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../profile/profile.html">
+                        <span class="menu-icon">👤</span> Profile
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="dashboard-widget glass-panel slide-up delay-1">
+                <a href="opportunities.html" class="text-link text-sm"
+                    style="display: inline-block; margin-bottom: 1rem;">&larr; Back to Opportunities</a>
+
+                <div id="loader" style="padding: 3rem; text-align: center;">
+                    <span class="loader" style="width: 40px; height: 40px; border-width: 3px;"></span>
+                </div>
+
+                <div id="details-container" style="display: none;">
+                    <div class="opp-header">
+                        <div>
+                            <span class="item-badge badge-new" id="opp-category"
+                                style="margin-bottom: 10px; display: inline-block;">Internship</span>
+                            <h1 id="opp-title" style="font-size: 2.5rem; margin-bottom: 0.5rem; line-height: 1.2;">
+                                Software Engineering Intern</h1>
+                            <div id="opp-company-loc" class="opp-company" style="font-size: 1.1rem;">Google &bull;
+                                Remote</div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="display: flex; gap: 1rem; margin: 1.5rem 0; padding-bottom: 1.5rem; border-bottom: 1px solid var(--surface-border); flex-wrap: wrap;">
+                        <span class="opp-deadline" style="font-size: 0.95rem;">⏳ Deadline: <span
+                                id="opp-deadline-text">Apr 15, 2026</span></span>
+                        <span class="opp-deadline"
+                            style="background: rgba(59, 130, 246, 0.1); color: #93c5fd; font-size: 0.95rem;">💰 Paid
+                            Position</span>
+                        <span class="opp-deadline"
+                            style="background: rgba(16, 185, 129, 0.1); color: #6ee7b7; font-size: 0.95rem;">📅 Summer
+                            2026</span>
+                    </div>
+
+                    <div style="margin-bottom: 2.5rem;">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">About This Opportunity</h3>
+                        <p id="opp-desc" class="opp-description" style="font-size: 1.05rem;">
+                            Join Google's core search infrastructure team to build hyper-scale distributed systems. You
+                            will work alongside world-class engineers to tackle complex algorithmic challenges and
+                            improve search performance globally. This internship provides an unmatched opportunity to
+                            deploy code serving billions of users.
+                        </p>
+
+                        <h4 style="margin: 2rem 0 0.8rem; font-size: 1.15rem;">Key Requirements</h4>
+                        <ul
+                            style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8; font-size: 1.05rem;">
+                            <li>Currently pursuing a Bachelor's, Master's, or PhD degree in Computer Science or related
+                                technical field.</li>
+                            <li>Experience with programming languages such as Java, C++, Python, or Go.</li>
+                            <li>Strong foundational understanding of data structures, algorithms, and software design.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button id="apply-btn" class="btn btn-primary btn-large glow-effect">
+                            <span class="btn-text">🚀 Apply Now</span>
+                            <span class="loader" style="display: none; border-width: 2px;"></span>
+                        </button>
+                        <button id="save-btn" class="btn btn-secondary btn-large">
+                            <span class="btn-text">🔖 Save Opportunity</span>
+                            <span class="loader"
+                                style="display: none; border-width: 2px; border-top-color: transparent; border-right-color: transparent;"></span>
+                        </button>
+                    </div>
+
+                    <div id="feedback-msg" class="error-banner"
+                        style="display: none; margin-top: 1.5rem; text-align: left; padding: 1.2rem;"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../scripts/opportunity-details.js"></script>
+</body>
+
+</html>
